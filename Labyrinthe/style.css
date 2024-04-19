@@ -1,0 +1,111 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+.zero{
+    color: transparent;
+}
+table{
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    
+
+}
+#haut{
+    background-image: url(./assets/haut.png);
+    background-size: cover;
+    background-color: white;
+    border: none;
+    color: transparent;
+    height: 30px;
+    width: 30px;
+}
+#bas{
+    background-image: url(./assets/bas.png);
+    background-size: cover;
+    background-color: white;
+    border: none;
+    color: transparent;
+    height: 30px;
+    width: 30px;
+}
+#gauche{
+    background-image: url(./assets/gauche.png);
+    background-size: cover;
+    background-color: white;
+    border: none;
+    color: transparent;
+    height: 30px;
+    width: 30px;
+}
+#droite{
+    background-image: url(./assets/droite.png);
+    background-size: cover;
+    background-color: white;
+    border: none;
+    color: transparent;
+    height: 30px;
+    width: 30px;
+}
+#reset{
+    background-image: url(./assets/reset.png);
+    background-size: cover;
+    background-color: white;
+    border: none;
+    color: transparent;
+    height: 30px;
+    width: 30px;
+}
+input{
+    display: flex;
+    margin: 10px;
+    
+}
+.bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 300px;
+    margin-top: 25px;
+}
+p{
+    font-size: 80px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-family: fantasy;
+}
+#rejou{
+    
+    margin-top: 10px;
+    background-color: #115c7f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+#rejou:hover {
+    background-color: #49c1ec;
+}
+#gagne{
+    font-family: fantasy;
+}
+body{
+    background-color: #49c1ec;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#cons{
+    font-size: 40px;
+    font-family: fantasy;
+}
