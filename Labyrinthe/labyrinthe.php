@@ -14,9 +14,18 @@
         <p id="cons">Attrape la souris pour gagné !</p>
     </header>
     <main>
+        <div class="niv">
+            <p> Niveau : </p>
+        <form  method="post">
+
+            <input id="diff" type="submit" name="fog" value="hard">
+
+        </form>
+        </div>
         <?php
         session_start();
-        $maze = [[
+        $maze = [
+            [
                 [2, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 1, 0, 0, 1],
                 [0, 1, 0, 1, 0, 1, 0, 1],
@@ -41,6 +50,9 @@
         }
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST['fog'])) {
+                $_SESSION['fog'] = true;
+            }
             if (isset($_POST["reset"])) {
                 session_destroy();
             }
@@ -90,7 +102,8 @@
                 }
             }
         }
-        foreach ($maze as $i => $line) {
+        if (isset($_SESSION["fog"])) {
+           foreach ($maze as $i => $line) {
             $catPos = $_SESSION['pos'];
             foreach ($line as $j => $cell) {
                 if (!(
@@ -108,16 +121,18 @@
                 }
             }
         }
+        }
+        
         ?>
-        <?php if (isset($gameOver) && $gameOver === true) : 
+        <?php if (isset($gameOver) && $gameOver === true) :
             session_destroy();
-            ?>
+        ?>
             <p id="gagne">Bravo ! Vous avez attrapé la souris !</p>
             <form method="post">
-        <input id="rejou" type="submit" name="replay" value="Rejouer">
-    </form>
+                <input id="rejou" type="submit" name="replay" value="Rejouer">
+            </form>
         <?php else : ?>
-            <table>
+            <table class="tablo">
                 <?php
                 foreach ($maze as $row) {
                     echo ('<tr>');
@@ -148,11 +163,19 @@
                 ?>
             </table>
             <form class="bouton" method="post">
-                <input id="haut" type="submit" name="dir" value="up">
-                <input id="bas" type="submit" name="dir" value="down">
-                <input id="gauche" type="submit" name="dir" value="left">
-                <input id="droite" type="submit" name="dir" value="right">
-                <input id="reset" type="submit" name="reset" value="reset">
+                <div class="up">
+                    <input id="haut" type="submit" name="dir" value="up">
+                </div>
+                <div class="cote">
+                    <input id="gauche" type="submit" name="dir" value="left">
+                    <input id="reset" type="submit" name="reset" value="reset">
+                    <input id="droite" type="submit" name="dir" value="right">
+                </div>
+                <div class="down">
+                    <input id="bas" type="submit" name="dir" value="down">
+                </div>
+
+
             </form>
         <?php endif; ?>
     </main>

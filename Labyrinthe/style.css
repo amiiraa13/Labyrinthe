@@ -10,13 +10,16 @@ table{
     display: flex;
     justify-content: center;
     width: 80%;
-    
 
+}
+.tablo{
+    border: solid 5px black;
+    border-radius: 50px;
 }
 #haut{
     background-image: url(./assets/haut.png);
     background-size: cover;
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: transparent;
     height: 30px;
@@ -25,7 +28,7 @@ table{
 #bas{
     background-image: url(./assets/bas.png);
     background-size: cover;
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: transparent;
     height: 30px;
@@ -34,7 +37,7 @@ table{
 #gauche{
     background-image: url(./assets/gauche.png);
     background-size: cover;
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: transparent;
     height: 30px;
@@ -43,7 +46,7 @@ table{
 #droite{
     background-image: url(./assets/droite.png);
     background-size: cover;
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: transparent;
     height: 30px;
@@ -52,7 +55,7 @@ table{
 #reset{
     background-image: url(./assets/reset.png);
     background-size: cover;
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: transparent;
     height: 30px;
@@ -65,14 +68,14 @@ input{
 }
 .bouton{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    background-color: white;
+    
     width: 300px;
     margin-top: 25px;
 }
 p{
-    font-size: 80px;
+    
     text-align: center;
 }
 h1{
@@ -95,6 +98,7 @@ h1{
 }
 #gagne{
     font-family: fantasy;
+    font-size: 80px;
 }
 body{
     background-color: #49c1ec;
@@ -108,4 +112,36 @@ main{
 #cons{
     font-size: 40px;
     font-family: fantasy;
+}
+.up{
+    display: flex;
+    justify-content: center;
+}
+.cote{
+    display: flex;
+    justify-content: space-around;
+}
+.down{
+    display: flex;
+    justify-content: center;
+}
+#diff{
+        margin-top: 10px;
+        background-color: #115c7f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+    #diff:hover {
+        background-color: #49c1ec;
+    
+}
+.niv{
+    display: flex;
+    font-size: 20px;
+    font-family: fantasy;
+    align-items: center;
 }
